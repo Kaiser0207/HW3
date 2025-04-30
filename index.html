@@ -1,41 +1,85 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>Instagram 登入</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam 登入</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <div class="left">
-        <div class="phone-mockup">
-            <img src="https://via.placeholder.com/300x500" alt="mockup" class="main-img">
-            <!-- 可自行加入更多裝飾圖案 -->
+<div class="main-container">
+    <header class="site-header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="logo_steam.svg" alt="Steam" class="steam-logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">商店</a></li>
+                    <li><a href="#" class="active">社群</a></li>
+                    <li><a href="#">關於</a></li>
+                    <li><a href="#">客服中心</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="download-btn">安裝 Steam</a>
+                <a href="#" class="login-btn">登入</a>
+                <div class="language-selector">
+                    <span id="languageToggle">語言 ▼</span>
+                    <ul class="language-dropdown">
+                        <li>繁體中文</li>
+                        <li>简体中文</li>
+                        <li>English</li>
+                        <li>日本語</li>
+                        <li>한국어</li>
+                        <li>Deutsch</li>
+                        <li>Français</li>
+                        <li>Español</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="right">
-        <form class="login-form">
-            <h1 class="logo">Instagram</h1>
-            <input type="text" placeholder="手機號碼、用戶名稱或電子郵件地址" required>
-            <input type="password" placeholder="密碼" required>
-            <button type="submit">登入</button>
-            <div class="divider">或</div>
-            <button type="button" class="fb-login">使用 Facebook 帳號登入</button>
-            <a href="#" class="forgot">忘記密碼？</a>
-        </form>
-        <div class="signup">
-            沒有帳號嗎？<a href="#">註冊</a>
+    </header>
+
+    <main class="login-main">
+        <div class="login-container">
+            <h1 class="login-title">登入</h1>
+
+            <div class="login-options-wrapper">
+                <div class="login-options">
+                    <div class="account-login">
+                        <h3>以帳戶名稱登入</h3>
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <input type="text" id="username" name="username" placeholder="" required>
+                            </div>
+                            <h3>密碼</h3>
+                            <div class="form-group">
+                                <input type="password" id="password" name="password" placeholder="" required>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="remember" name="remember">
+                                <label for="remember">記住我</label>
+                            </div>
+                            <button type="submit" class="login-button">登入</button>
+                        </form>
+                        <div class="forgot-password">
+                            <a href="#">幫幫我，我無法登入</a>
+                        </div>
+                    </div>
+
+                    <div class="qr-login">
+                        <h3>掃描 QR 碼登入</h3>
+                        <div class="qr-code">
+                            <img src="qr.png" alt="qr" >
+                        </div>
+                        <p class="qr-description">使用 Steam 行動應用程式掃描 QR 碼登入</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
 </div>
-<footer>
-    <div class="footer-links">
-        Meta 關於 新聞 使用說明 API 職業 使用條款 隱私 地點 Instagram Lite Threads
-    </div>
-    <div class="footer-meta">
-        中文(台灣) © 2025 Instagram from Meta
-    </div>
-</footer>
 <script src="script.js"></script>
 </body>
 </html>
