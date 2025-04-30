@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.left, .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-mockup {
+    position: relative;
+    width: 320px;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+}
+
+.right {
+    flex-direction: column;
+    min-width: 350px;
+}
+
+.login-form {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    padding: 40px 40px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    border-radius: 8px;
+}
+
+.logo {
+    font-family: 'Segoe Script', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.login-form input {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    background: #fafafa;
+}
+
+.login-form button[type="submit"] {
+    width: 100%;
+    background: #0095f6;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.divider {
+    margin: 18px 0 10px 0;
+    color: #8e8e8e;
+    font-size: 14px;
+}
+
+.fb-login {
+    background: none;
+    color: #385185;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.forgot {
+    color: #00376b;
+    font-size: 12px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.signup {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 10px;
+    width: 350px;
+    font-size: 14px;
+}
+
+.signup a {
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    color: #8e8e8e;
+    font-size: 13px;
+    margin-top: 40px;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
