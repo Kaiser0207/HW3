@@ -1,4 +1,5 @@
-document.getElementById('loginForm').addEventListener('submit', function (e) {
+// 處理登入表單提交
+document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
@@ -10,15 +11,15 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
     }
 });
 
-document.getElementById('languageToggle').addEventListener('click', function () {
-    const dropdown = document.querySelector('.language-dropdown');
-    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+const languageToggle = document.getElementById('languageToggle');
+const languageDropdown = document.querySelector('.language-dropdown');
+
+languageToggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    languageDropdown.style.display =
+        languageDropdown.style.display === 'block' ? 'none' : 'block';
 });
 
-document.addEventListener('click', function (e) {
-    const languageSelector = document.querySelector('.language-selector');
-    const dropdown = document.querySelector('.language-dropdown');
-    if (!languageSelector.contains(e.target)) {
-        dropdown.style.display = 'none';
-    }
+document.addEventListener('click', function() {
+    languageDropdown.style.display = 'none';
 });

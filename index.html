@@ -15,26 +15,47 @@
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#">商店</a></li>
-                    <li><a href="#" class="active">社群</a></li>
+                    <li>
+                        <a href="#">商店</a>
+                        <ul class="dropdown">
+                            <li>首頁</li>
+                            <li>探索佇列</li>
+                            <li>願望商店</li>
+                            <li>點數商店</li>
+                            <li>新聞</li>
+                            <li>統計資料</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">社群</a>
+                        <ul class="dropdown">
+                            <li>首頁</li>
+                            <li>討論區</li>
+                            <li>工作坊</li>
+                            <li>市集</li>
+                            <li>實況轉播</li>
+                        </ul>
+                    </li>
                     <li><a href="#">關於</a></li>
                     <li><a href="#">客服中心</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
                 <a href="#" class="download-btn">安裝 Steam</a>
-                <a href="#" class="login-btn">登入</a>
+                <a href="#" class="login-btn">登入</a> |&nbsp; &nbsp;
                 <div class="language-selector">
                     <span id="languageToggle">語言 ▼</span>
                     <ul class="language-dropdown">
-                        <li>繁體中文</li>
-                        <li>简体中文</li>
-                        <li>English</li>
-                        <li>日本語</li>
-                        <li>한국어</li>
-                        <li>Deutsch</li>
-                        <li>Français</li>
-                        <li>Español</li>
+                        <li>繁體中文 (繁體)</li>
+                        <li>简体中文 (簡體)</li>
+                        <li>English (英文)</li>
+                        <li>日本語 (日文)</li>
+                        <li>한국어 (韓文)</li>
+                        <li>Deutsch (德文)</li>
+                        <li>Français (法文)</li>
+                        <li>Español (西班牙文)</li>
+                        <li>Русский (俄文)</li>
+                        <li>Italiano (義大利文)</li>
                     </ul>
                 </div>
             </div>
@@ -51,11 +72,11 @@
                         <h3>以帳戶名稱登入</h3>
                         <form id="loginForm">
                             <div class="form-group">
-                                <input type="text" id="username" name="username" placeholder="" required>
+                                <input type="text" id="username" name="username" required>
                             </div>
                             <h3>密碼</h3>
                             <div class="form-group">
-                                <input type="password" id="password" name="password" placeholder="" required>
+                                <input type="password" id="password" name="password" required>
                             </div>
                             <div class="form-check">
                                 <input type="checkbox" id="remember" name="remember">
@@ -71,7 +92,7 @@
                     <div class="qr-login">
                         <h3>掃描 QR 碼登入</h3>
                         <div class="qr-code">
-                            <img src="qr.png" alt="qr" >
+                            <img src="qr.png" alt="QR 碼登入">
                         </div>
                         <p class="qr-description">使用 Steam 行動應用程式掃描 QR 碼登入</p>
                     </div>

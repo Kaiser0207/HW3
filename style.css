@@ -7,19 +7,23 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #1b2838;
+    background-image: url("new_login.jpg");
     color: #c7d5e0;
-    background-image: url('steam-bg.jpg');
     background-size: cover;
     background-position: center;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .main-container {
     min-height: 100vh;
     width: 100%;
+    margin: 0;
 }
 
-/* Header Styles */
 .site-header {
     background-color: #171a21;
     padding: 0 20px;
@@ -28,18 +32,20 @@ body {
 }
 
 .header-content {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 104px;
+    gap: 20px;
 }
 
 .logo-container {
-    padding-right: 20px;
-    margin-left: 130px;
+    margin-left: 230px;
+    transition: margin-left 0.3s ease;
     font-family: "Motiva Sans", sans-serif;
+    width: 150px;
 }
 
 .steam-logo {
@@ -47,11 +53,16 @@ body {
     height: auto;
 }
 
+.main-nav {
+    background-color: #171a21;
+}
+
 .main-nav ul {
     display: flex;
     list-style: none;
     height: 100%;
-    margin-left: -335px;
+    margin-left: -380px;
+    gap: 20px;
 }
 
 .main-nav li {
@@ -69,24 +80,13 @@ body {
     align-items: center;
 }
 
-.main-nav a.active {
-    color: #ffffff;
-    border-bottom: 3px solid #1a9efd;
-    border-radius: 2px;
-}
 
 .header-actions {
     display: flex;
     align-items: center;
     position: relative;
     top: -35px;
-    left: -120px;
-}
-
-.header-actions .login-btn::after {
-    content: "|";
-    color: #b8b6b4;
-    margin: 0 10px;
+    left: -220px;
 }
 
 .download-btn {
@@ -104,6 +104,7 @@ body {
     font-size: 10px;
     margin-right: 10px;
 }
+
 
 .language-selector {
     position: relative;
@@ -136,7 +137,6 @@ body {
     color: #000000;
 }
 
-/* Login Main Content */
 .login-main {
     display: flex;
     justify-content: center;
@@ -159,11 +159,15 @@ body {
 }
 
 .login-options-wrapper {
-    background-color: rgba(24, 26, 33, 0.8);
+    background-color: rgba(24, 26, 33);
     border-radius: 4px;
     padding: 24px 32px;
-    width: 700px;
+    max-width: 700px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .login-options {
@@ -301,12 +305,73 @@ input[type="text"]:focus, input[type="password"]:focus {
     object-fit: contain;
 }
 
-@media (max-width: 768px) {
-    .login-options {
-        flex-direction: column;
+@media (max-width: 1350px) {
+    .header-content {
+        justify-content: center;
     }
 
-    .login-options-wrapper {
-        padding: 20px;
+    .main-nav,
+    .header-actions {
+        display: none;
     }
+
+    .logo-container {
+        margin-left: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 740px) {
+    .login-options-wrapper {
+        margin-top: 40px;
+    }
+
+    .login-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-container {
+        margin-top: 15px;
+    }
+}
+
+.main-nav li {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #3d434f;
+    border: 1px solid #3d434f;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    width: 100px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+}
+
+.main-nav li .dropdown li {
+    padding: 8px 12px;
+    color: #c7d5e0;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #3d434f;
+}
+
+.main-nav li .dropdown li:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.main-nav li:hover .dropdown {
+    display: block;
 }
