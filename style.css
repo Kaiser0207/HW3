@@ -8,9 +8,12 @@ body {
     font-family: Arial, sans-serif;
     background-color: #1b2838;
     background-image: url("new_login.jpg");
+    background-size: 120%;
+    background-repeat: no-repeat;
     color: #c7d5e0;
-    background-size: cover;
-    background-position: center;
+    background-position: center 130%;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: darken;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -22,6 +25,8 @@ body {
     min-height: 100vh;
     width: 100%;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .site-header {
@@ -141,14 +146,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 20px;
-    min-height: calc(100vh - 64px);
+    padding: 125px 20px;
+    min-height: calc(100vh - 64px - 400px);
 }
 
 .login-container {
     width: 100%;
     max-width: 640px;
-    margin-top: -150px;
+    margin-top: 0px;
 }
 
 .login-title {
@@ -374,4 +379,190 @@ input[type="text"]:focus, input[type="password"]:focus {
 
 .main-nav li:hover .dropdown {
     display: block;
+}
+
+.new-user-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.new-user-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.new-user-left h2 {
+    color: #fdfdfd;
+    font-size: 20px;
+}
+
+.new-user-section h2 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.new-user-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.create-account-btn {
+    background-color: #3b95ff;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.new-user-info {
+    color: #c7d5e0;
+    font-size: 14px;
+    max-width: 400px;
+    line-height: 1.5;
+    text-align: center;
+    align-items: center;
+}
+
+.learn-more {
+    color: #c7d5e0;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+.site-footer {
+    background-color: #171a21;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+
+.footer-content {
+    max-width: 940px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0 20px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+
+.footer-copyright {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(143, 152, 160, 0.5);
+    border-bottom: 1px solid rgba(143, 152, 160, 0.5);
+    padding-top: 5px;
+    padding-bottom: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-copyright .valve-logo {
+    margin-right: 10px;
+    width: 88px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.footer-copyright .footer-text {
+    flex: 1;
+    text-align: left;
+    color: #8f98a0;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.footer-copyright .footer-steam-logo {
+    margin-left: 20px;
+}
+
+.footer-copyright a {
+    color: #c6d4df;
+    text-decoration: none;
+}
+
+.footer-copyright a:hover {
+    text-decoration: underline;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.footer-links ul li {
+    display: inline-block;
+    position: relative;
+    font-size: 13px;
+    color: #c6d4df;
+}
+
+.footer-links ul li:not(:last-child)::after {
+    content: "|";
+    margin-left: 30px;
+    margin-right: 15px;
+    color: #8f98a0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #c6d4df;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links .social-icon {
+    height: 14px;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .footer-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .new-user-actions {
+        padding: 0 15px;
+    }
+}
+
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
