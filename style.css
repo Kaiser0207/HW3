@@ -21,6 +21,12 @@ body {
     justify-content: center;
 }
 
+@media (max-width: 1650px) {
+    body {
+        background-size: cover;
+    }
+}
+
 .main-container {
     min-height: 100vh;
     width: 100%;
