@@ -247,28 +247,6 @@ input[type="text"]:focus, input[type="password"]:focus {
     border-color: #66c0f4;
 }
 
-.password-container {
-    position: relative;
-}
-
-.password-toggle {
-    position: absolute;
-    right: -5px;
-    top: 55%;
-    transform: translateY(-50%);
-    cursor: pointer;
-}
-
-.password-toggle svg {
-    color: #8f98a0;
-    width: 20px;
-    height: 20px;
-}
-
-.password-toggle:hover svg {
-    color: #c6d4df;
-}
-
 .form-check {
     display: flex;
     align-items: center;

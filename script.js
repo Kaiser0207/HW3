@@ -21,19 +21,3 @@ languageToggle.addEventListener('click', function(e) {
 document.addEventListener('click', function() {
     languageDropdown.style.display = 'none';
 });
-
-document.querySelector('.password-toggle').addEventListener('click', function() {
-    const passwordInput = document.getElementById('password');
-    const eyeIcon = document.getElementById('eyeIcon');
-    const eyeSlashIcon = document.getElementById('eyeSlashIcon');
-
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        eyeIcon.style.display = 'inline';
-        eyeSlashIcon.style.display = 'none';
-    } else {
-        passwordInput.type = 'password';
-        eyeIcon.style.display = 'none';
-        eyeSlashIcon.style.display = 'inline';
-    }
-});
