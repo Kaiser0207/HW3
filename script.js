@@ -5,7 +5,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     const password = document.getElementById('password').value;
 
     if (username && password) {
-        alert('登入成功！');
+        alert('已登入成功！');
     }
 });
 
